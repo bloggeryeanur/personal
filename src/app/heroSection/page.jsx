@@ -3,7 +3,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "../globals.css";
 import { Pagination, Autoplay } from "swiper/modules";
-//
+// 
 import {
   Box,
   Button,
@@ -14,12 +14,13 @@ import {
   Typography,
   createTheme,
 } from "@mui/material";
-import Image from "next/image";
 import One from "../image/background/1.jpg";
 import Two from "../image/background/2.jpg";
 import Three from "../image/background/3.jpg";
 import HeroCard from "./HeroCard";
 // Theme function
+
+
 
 
 const HeroSection = () => {

@@ -36,7 +36,7 @@ export default function Contact() {
             <Item>
               <AddIcCallIcon color="secondary" />
               <Typography variant="h5">Call Us On</Typography>
-              <Typography>+985 123 7856</Typography>
+              <Typography>+8801620-34 93 63</Typography>
             </Item>
           </Grid>
           <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>

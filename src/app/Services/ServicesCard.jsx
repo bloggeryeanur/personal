@@ -6,27 +6,26 @@ import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import Image from "next/image";
 
-export default function MultiActionAreaCard({title,description, img}) {
+export default function ServicesCard({title,description, img}) {
   return (
-    <box sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <Image src={img} alt="'Card image"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-           {title}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-           {description}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      
-      <CardActions>
-        <Button variant='outlined' size="small" color="secondary">
-          Read More...
-        </Button>
-      </CardActions>
-    </box>
+    <Card>
+    <CardActionArea>
+      <Image style={{width:'100%', height:'100%'}} src={img} alt="'card image"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          Lizard
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+         {description}
+        </Typography>
+      </CardContent>
+    </CardActionArea>
+    <CardActions>
+      <Button size="small" color="primary">
+        {title}
+      </Button>
+    </CardActions>
+  </Card>
   );
 }

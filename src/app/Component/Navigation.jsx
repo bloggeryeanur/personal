@@ -15,7 +15,13 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { Container, Switch, ThemeProvider, createTheme } from "@mui/material";
+import {
+  Container,
+  Paper,
+  Switch,
+  ThemeProvider,
+  createTheme,
+} from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import Profile from "../image/client/testi-1.jpg";
@@ -29,15 +35,32 @@ import Client from "../client/page";
 import Contact from "../contact/page";
 import Footer from "./Footer";
 import Skill from "../skill/page";
+import { Link } from "react-scroll";
+// Theming function
 
 const drawerWidth = 240;
 const navItems = [
-  "About",
-  "Portfolio",
-  "Services",
-  "Client",
-  "sskil",
-  "Contact",
+  {
+    id: "about",
+    name: "About",
+  },
+
+  {
+    id: "portfolio",
+    name: "Portfolio",
+  },
+  {
+    id: "services",
+    name: "Services",
+  },
+  {
+    id: "client",
+    name: "Client",
+  },
+  {
+    id: "contact",
+    name: "Contact",
+  },
 ];
 
 function DrawerAppBar(props) {
@@ -59,10 +82,12 @@ function DrawerAppBar(props) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+        {navItems.map(({ id, name }) => (
+          <ListItem key={id} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+              <Link href={`#${id}`}>
+                <ListItemText primary={name} />
+              </Link>
             </ListItemButton>
           </ListItem>
         ))}
@@ -74,6 +99,7 @@ function DrawerAppBar(props) {
     window !== undefined ? () => window().document.body : undefined;
   // them function
   const [dMode, setDMode] = React.useState(false);
+
   const dark = createTheme({
     palette: {
       mode: "dark",
@@ -90,10 +116,10 @@ function DrawerAppBar(props) {
     <ThemeProvider theme={dMode === false ? light : dark}>
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
-        <AppBar sx={{ background: "white", color: "Gray", mx: "0 auto" }}>
+        
+        <AppBar sx={{ mx: "0 auto",background: (theme) => (theme.palette.mode === 'dark' ? '#00060d' : '#ffffff')  }}>
           <Toolbar>
             <IconButton
-              color="inherit"
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
@@ -104,17 +130,33 @@ function DrawerAppBar(props) {
               variant="h6"
               component="div"
               sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
-              Home
+              <Link
+                to={"home"}
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}>
+                <Button>Home</Button>
+              </Link>
+              {/* <a href="#home">
+                  Heome 2
+                </a> */}
             </Typography>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              {navItems.map((item) => (
-                <Button key={item} sx={{ color: "gray" }}>
-                  {item}
-                </Button>
+              {navItems.map(({ id, name }) => (
+                <Link
+                  to={id}
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  key={id}>
+                  <Button>{name}</Button>
+                </Link>
               ))}
             </Box>
             {/* Toggle button here */}
-            <Switch onClick={()=>setDMode(!dMode)} color="secondary" />
+            <Switch onClick={() => setDMode(!dMode)} />
           </Toolbar>
         </AppBar>
         <nav>
@@ -136,19 +178,27 @@ function DrawerAppBar(props) {
             {drawer}
           </Drawer>
         </nav>
-        <Box sx={{ mt: 1 }}>
-         
-        </Box>
+        <Box sx={{}}></Box>
       </Box>
-       <HeroSection />
+      <Box id="home">
+        <HeroSection />
+      </Box>
+      <Box id="about">
         <About />
-        <PortFolio />
-        <HireMe />
+      </Box>
+      <Box id="portfolio"></Box>
+      <PortFolio />
+      <HireMe />
+      <Box id="services">
         <Services />
+      </Box>
+      <Box id="client">
         <Client />
-        <Skill />
+      </Box>
+      <Box id="contact">
         <Contact />
-        <Footer />
+      </Box>
+      <Footer />
     </ThemeProvider>
   );
 }

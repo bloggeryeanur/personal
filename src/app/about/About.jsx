@@ -6,6 +6,7 @@ import Image from "next/image";
 import Yeanur from "../image/about/hi.jpg";
 import { Button, Container, Typography, Switch } from "@mui/material";
 import { green, orange } from "@mui/material/colors";
+import { Poppins, Roboto } from "next/font/google";
 
 // Grid stytem
 const Item = styled(Box)(({ theme }) => ({
@@ -20,7 +21,9 @@ const About = () => {
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <Item>
               <Box sx={{ paddingTop: "2rem", paddingLeft: "1rem" }}>
-                <Typography variant="h4">Hey I'm Yeanur Rahman </Typography>
+                <Typography sx={{ fontWeight: 700 }} variant="h4">
+                  Hey I'm Yeanur Rahman{" "}
+                </Typography>
                 <Typography>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Pariatur reiciendis veniam, voluptates totam ea omnis,

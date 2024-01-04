@@ -21,7 +21,7 @@ const HireMe = () => {
       }}>
       <Box sx={{ textAlign: "center" }}>
         <Typography variant="h5">
-          I'm Available For Freelanch Work With You !
+          I'm Available For Remote Work !
         </Typography>
         <Button
           variant="contained"
@@ -31,7 +31,7 @@ const HireMe = () => {
           HIRE ME
         </Button>
       </Box>
-      <div>
+      <Box>
         <Accordion
           expanded={expanded === "panel1"}
           onChange={handleChange("panel1")}>
@@ -122,7 +122,7 @@ const HireMe = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-      </div>
+      </Box>
     </Container>
   );
 };

@@ -3,11 +3,11 @@ import * as React from "react";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-import ServicesCard from "./ServicesCard";
 import Image from "next/image";
 import Title from "../Component/Title";
 import Animal from "../image/services/animal.jpg";
 import One from "../image/services/1.jpeg";
+import ServicesCard from "./ServicesCard";
 
 // Function for Grid
 const Item = styled(Paper)(({ theme }) => ({
@@ -31,8 +31,8 @@ const Services = () => {
           <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
             <Item>
               <ServicesCard
-                title="Photography"
-                description="This is our best client services. And the photo is the on off the best photo in Dand Platefrom"
+                title="Frontend"
+                description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolorum repudiandae exercitationem velit est? Dicta, odit quae sint laudantium, temporibus voluptas obcaecati aperiam veniam fugiat,"
                 img={One}
               />
             </Item>
@@ -40,8 +40,8 @@ const Services = () => {
           <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
             <Item>
               <ServicesCard
-                title="Photography"
-                description="This is our best client services. And the photo is the on off the best photo in Dand Platefrom"
+                title="Backend"
+                description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolorum repudiandae exercitationem velit est? Dicta, odit quae sint laudantium, temporibus voluptas obcaecati aperiam veniam fugiat,"
                 img={Animal}
               />
             </Item>
@@ -49,8 +49,8 @@ const Services = () => {
           <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
             <Item>
               <ServicesCard
-                title="Photography"
-                description="This is our best client services. And the photo is the on off the best photo in Dand Platefrom"
+                title="FullStack"
+                description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolorum repudiandae exercitationem velit est? Dicta, odit quae sint laudantium, temporibus voluptas obcaecati aperiam veniam fugiat,"
                 img={One}
               />
             </Item>
@@ -58,8 +58,8 @@ const Services = () => {
           <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
             <Item>
               <ServicesCard
-                title="Photography"
-                description="This is our best client services. And the photo is the on off the best photo in Dand Platefrom"
+                title="UI/UX"
+                description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolorum repudiandae exercitationem velit est? Dicta, odit quae sint laudantium, temporibus voluptas obcaecati aperiam veniam fugiat,"
                 img={Animal}
               />
             </Item>
@@ -67,8 +67,8 @@ const Services = () => {
           <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
             <Item>
               <ServicesCard
-                title="Photography"
-                description="This is our best client services. And the photo is the on off the best photo in Dand Platefrom"
+                title="E-comers"
+                description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolorum repudiandae exercitationem velit est? Dicta, odit quae sint laudantium, temporibus voluptas obcaecati aperiam veniam fugiat,"
                 img={One}
               />
             </Item>
@@ -76,8 +76,8 @@ const Services = () => {
           <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
             <Item>
               <ServicesCard
-                title="Photography"
-                description="This is our best client services. And the photo is the on off the best photo in Dand Platefrom"
+                title="News"
+                description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolorum repudiandae exercitationem velit est? Dicta, odit quae sint laudantium, temporibus voluptas obcaecati aperiam veniam fugiat,"
                 img={Animal}
               />
             </Item>
