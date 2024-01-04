@@ -46,7 +46,7 @@ const Client = () => {
             <ClientCard
               img={One}
               title="Mr. Yeanur"
-              des="Our First client for frontend web services"
+              des="Frontend "
               alt="First client image"
             />
           </SwiperSlide>
@@ -54,7 +54,7 @@ const Client = () => {
             <ClientCard
               img={Two}
               title="Md. Yeanur"
-              des="Our First client for frontend web services"
+              des="Backend"
               alt="First client image"
             />
           </SwiperSlide>{" "}
@@ -62,7 +62,7 @@ const Client = () => {
             <ClientCard
               img={Three}
               title="Mr. Yeanur"
-              des="Our First client for frontend web services"
+              des="FullStack"
               alt="First client image"
             />
           </SwiperSlide>{" "}
@@ -70,7 +70,7 @@ const Client = () => {
             <ClientCard
               img={One}
               title="Mr. Yeanur"
-              des="Our First client for frontend web services"
+              des="FullStack"
               alt="First client image"
             />
           </SwiperSlide>{" "}
@@ -78,7 +78,7 @@ const Client = () => {
             <ClientCard
               img={Two}
               title="Md. Yeanur"
-              des="Our First client for frontend web services"
+              des="CMS"
               alt="First client image"
             />
           </SwiperSlide>{" "}
@@ -86,7 +86,7 @@ const Client = () => {
             <ClientCard
               img={One}
               title="Mr. Yeanur"
-              des="Our First client for frontend web services"
+              des="Frontend"
               alt="First client image"
             />
           </SwiperSlide>{" "}
@@ -94,7 +94,7 @@ const Client = () => {
             <ClientCard
               img={One}
               title="Mr. Yeanur"
-              des="Our First client for frontend web services"
+              des="Backend"
               alt="First client image"
             />
           </SwiperSlide>

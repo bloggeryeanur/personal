@@ -2,8 +2,9 @@ import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import { Box, CardActionArea, Typography } from "@mui/material";
+import { Box, Button, CardActionArea, Typography } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 
 const ClientCard = ({ img, title, des, alt }) => {
   return (
@@ -32,6 +33,9 @@ const ClientCard = ({ img, title, des, alt }) => {
           <Typography variant="body2" color="text.secondary">
             {des}
           </Typography>
+          <Link href={'/'}>
+            <Button color="secondary">Details...</Button>
+          </Link>
         </CardContent>
       </CardActionArea>
     </Card>

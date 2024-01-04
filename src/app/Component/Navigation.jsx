@@ -17,6 +17,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import {
   Container,
+  Grid,
   Paper,
   Switch,
   ThemeProvider,
@@ -120,6 +121,7 @@ function DrawerAppBar(props) {
       mode: "light",
     },
   });
+  // Contact function
 
   return (
     <ThemeProvider theme={dMode === false ? light : dark}>
@@ -197,8 +199,9 @@ function DrawerAppBar(props) {
       <Box id="about">
         <About />
       </Box>
-      <Box id="portfolio"></Box>
-      <PortFolio />
+      <Box id="portfolio">
+        <PortFolio />
+      </Box>
       <HireMe />
       <Box id="services">
         <Services />

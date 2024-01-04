@@ -7,6 +7,7 @@ import Yeanur from "../image/about/hi.jpg";
 import { Button, Container, Typography, Switch } from "@mui/material";
 import { green, orange } from "@mui/material/colors";
 import { Poppins, Roboto } from "next/font/google";
+import Link from "next/link";
 
 // Grid stytem
 const Item = styled(Box)(({ theme }) => ({
@@ -39,9 +40,11 @@ const About = () => {
                   debitis.
                 </Typography>
                 <Typography>Now i'm working won my project</Typography>
-                <Button variant="contained" color="secondary" sx={{ mt: 2 }}>
-                  Contact Me
-                </Button>
+                <Link href={"/order"}>
+                  <Button variant="contained" color="secondary" sx={{ mt: 2 }}>
+                    Contact Me
+                  </Button>
+                </Link>
               </Box>
             </Item>
           </Grid>
