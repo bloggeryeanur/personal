@@ -82,10 +82,19 @@ function DrawerAppBar(props) {
       </Typography>
       <Divider />
       <List>
+        <Link to={"home"} spy={true} smooth={true} offset={50} duration={500}>
+          <Button>Home</Button>
+        </Link>
         {navItems.map(({ id, name }) => (
           <ListItem key={id} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <Link href={`#${id}`}>
+              <Link
+                to={id}
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+                key={id}>
                 <ListItemText primary={name} />
               </Link>
             </ListItemButton>
@@ -116,8 +125,13 @@ function DrawerAppBar(props) {
     <ThemeProvider theme={dMode === false ? light : dark}>
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
-        
-        <AppBar sx={{ mx: "0 auto",background: (theme) => (theme.palette.mode === 'dark' ? '#00060d' : '#ffffff')  }}>
+
+        <AppBar
+          sx={{
+            mx: "0 auto",
+            background: (theme) =>
+              theme.palette.mode === "dark" ? "#00060d" : "#ffffff",
+          }}>
           <Toolbar>
             <IconButton
               aria-label="open drawer"
@@ -128,7 +142,7 @@ function DrawerAppBar(props) {
             </IconButton>
             <Typography
               variant="h6"
-              component="div"
+              component="box"
               sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
               <Link
                 to={"home"}
@@ -138,9 +152,6 @@ function DrawerAppBar(props) {
                 duration={500}>
                 <Button>Home</Button>
               </Link>
-              {/* <a href="#home">
-                  Heome 2
-                </a> */}
             </Typography>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map(({ id, name }) => (
