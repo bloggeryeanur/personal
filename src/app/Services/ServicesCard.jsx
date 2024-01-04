@@ -26,9 +26,9 @@ export default function ServicesCard({ title, description, img, btn }) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Link href={"/review"}>
+        <Link href={"/seemore"}>
           <Button variant="outlined" size="small" color="secondary">
-            See Review...
+            See More...
           </Button>
         </Link>
       </CardActions>

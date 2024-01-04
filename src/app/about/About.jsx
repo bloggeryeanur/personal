@@ -8,7 +8,7 @@ import { Button, Container, Typography, Switch } from "@mui/material";
 import { green, orange } from "@mui/material/colors";
 import { Poppins, Roboto } from "next/font/google";
 import Link from "next/link";
-
+import EastIcon from "@mui/icons-material/East";
 // Grid stytem
 const Item = styled(Box)(({ theme }) => ({
   padding: theme.spacing(1),
@@ -40,8 +40,12 @@ const About = () => {
                   debitis.
                 </Typography>
                 <Typography>Now i'm working won my project</Typography>
-                <Link href={"/order"}>
-                  <Button variant="contained" color="secondary" sx={{ mt: 2 }}>
+                <Link href={"/form"}>
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    endIcon={<EastIcon />}
+                    sx={{ mt: 2 }}>
                     Contact Me
                   </Button>
                 </Link>

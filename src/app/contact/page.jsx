@@ -12,6 +12,8 @@ import Title from "../Component/Title";
 import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
 import AddLocationAltIcon from "@mui/icons-material/AddLocationAlt";
+import ContactForm from "./ContactForm";
+
 
 // Gird function
 const Item = styled(Paper)(({ theme }) => ({
@@ -55,40 +57,7 @@ export default function Contact() {
           </Grid>
         </Grid>
       </Box>
-      <Box
-        component="form"
-        sx={{
-          marginTop: "3rem",
-          "& > :not(style)": { m: 1 },
-        }}
-        noValidate
-        autoComplete="off">
-        {/* Grid layout for Name and Email */}
-        <Grid container spacing={1}>
-          <Grid item xs={12} sm={6} sx={{ marginLeft: "-7px" }}>
-            <TextField fullWidth id="name" label="Name" variant="outlined" />
-          </Grid>
-          <Grid item xs={12} sm={6} sx={{ marginLeft: "-7px" }}>
-            <TextField fullWidth id="email" label="Email" variant="outlined" />
-          </Grid>
-        </Grid>
-
-        {/* Other text fields */}
-        <TextField fullWidth id="subject" label="Subject" variant="outlined" />
-        <TextField
-          fullWidth
-          id="Message"
-          label="Message"
-          variant="outlined"
-          multiline
-          rows={4}
-        />
-        <Box sx={{ textAlign: "end" }}>
-          <Button variant="contained" color="secondary">
-            Send Message
-          </Button>
-        </Box>
-      </Box>
+   <ContactForm />
     </Container>
   );
 }

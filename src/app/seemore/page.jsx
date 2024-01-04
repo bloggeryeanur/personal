@@ -17,6 +17,7 @@ import { Button, Container } from "@mui/material";
 import Image from "next/image";
 import Client from "../image/client/testi-1.jpg";
 import Link from "next/link";
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 
 function refreshMessages() {
   const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
@@ -38,11 +39,16 @@ export default function Review() {
 
   return (
     <Container maxWidth="sm">
-      <Link href={"/"}>
-        <Button variant="contained" color="secondary" sx={{ mt: 1 }}>
+      <Box sx={{textAlign:'end' }}>
+      <Link href={"/"} >
+        <Button variant="contained" 
+        color="secondary" 
+        startIcon={<KeyboardBackspaceIcon />} sx={{ mt: 1 }}>
           Home
         </Button>
       </Link>
+      </Box>
+      
 
       <Box sx={{ pb: 7 }} ref={ref}>
         <CssBaseline />
@@ -65,9 +71,18 @@ export default function Review() {
             onChange={(event, newValue) => {
               setValue(newValue);
             }}>
-            <BottomNavigationAction label="Running" icon={<RestoreIcon color='secondary'/>} />
-            <BottomNavigationAction label="Best" icon={<FavoriteIcon color='secondary'/>} />
-            <BottomNavigationAction label="Delivery" icon={<ArchiveIcon color='secondary'/>} />
+            <BottomNavigationAction
+              label="Running"
+              icon={<RestoreIcon color="secondary" />}
+            />
+            <BottomNavigationAction
+              label="Best"
+              icon={<FavoriteIcon color="secondary" />}
+            />
+            <BottomNavigationAction
+              label="Delivery"
+              icon={<ArchiveIcon color="secondary" />}
+            />
           </BottomNavigation>
         </Paper>
       </Box>
@@ -77,41 +92,42 @@ export default function Review() {
 
 const messageExamples = [
   {
-    primary: "Mr. Yeanur",
+    primary: "WordPress",
     secondary:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nihil ex labore beatnima quo, vero eveniet sapiente nisi, reprehenderit voluptatibus mollitia!",
   },
   {
-    primary: "Mr. Rahman",
+    primary: "Jumla",
     secondary:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nihil ex labore beatae soluta vero eveniet sapiente nisi, reprehenderit voluptatibus mollitia!",
   },
   {
-    primary: "Mr. Khan",
+    primary: "Row HTML And CSS",
     secondary:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nihil ex labore beatae soluta adipisci facilis dolorum necessitatibus sint delectus magni minima quoitia!",
   },
   {
-    primary: "Mr. Mullah",
+    primary: "Reactjs And Nextjs",
     secondary:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nihil ex labore beatae soluta adipisci facilis dolorum necessitatibus sint delectus magni minima quo, vero eveniet sapiente nisi, reprehenderit voluptatibus mollitia!",
   },
   {
-    primary: "Mr. Yeanur",
-    secondary: "sit amet consectetur adipisicing elit. Architecto nihil ex labore beatae soluta adipisci facilis dolorum necessitatibus sint delectus magni minima quo, vero eveniet sapiente nisi, reprehenderit voluptatibus mollitia!",
+    primary: "NodeJs",
+    secondary:
+      "sit amet consectetur adipisicing elit. Architecto nihil ex labore beatae soluta adipisci facilis dolorum necessitatibus sint delectus magni minima quo, vero eveniet sapiente nisi, reprehenderit voluptatibus mollitia!",
   },
   {
-    primary: "Mr. Rahman",
+    primary: "FullStack",
     secondary:
       "Lorem ipsume beatae soluta adipisci facilis dolorum necessitatibus sint delectus magni minima quo, vero eveniet sapiente nisi, reprehenderit voluptatibus mollitia!",
   },
   {
-    primary: "Mr. Khan",
+    primary: "Backend web development",
     secondary:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nihil ex labore beatae soluta adipisci facilis dolorum necessitatibus sint delectus magni minima quo, vero eveniet sapiente nisi, reprehenderit voluptatibus mollitia!",
   },
   {
-    primary: "Mr. Yeanur",
+    primary: "Frontend web development",
     secondary:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nihil ex labore beatae soluta adipisci facilis dolorum necessitatibus sint delectus magni minima quo, vero eveniet sapiente nisi, reprehenderit voluptatibus mollitia!",
   },

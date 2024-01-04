@@ -2,11 +2,10 @@ import * as React from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
-
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
 import { Box, Button, Container, Typography } from "@mui/material";
 import Link from "next/link";
+import EastIcon from "@mui/icons-material/East";
 
 const HireMe = () => {
   const [expanded, setExpanded] = React.useState(false);
@@ -22,8 +21,9 @@ const HireMe = () => {
       }}>
       <Box sx={{ textAlign: "center" }}>
         <Typography variant="h5">I'm Available For Remote Work !</Typography>
-        <Link href={"/order"}>
+        <Link href={"/form"}>
           <Button
+            endIcon={<EastIcon />}
             variant="contained"
             color="secondary"
             size="large"
