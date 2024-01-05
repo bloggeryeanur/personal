@@ -34,6 +34,11 @@ import {
 } from "@mui/icons-material";
 import PortFolioCard from "./PortFolioCard";
 import Title from "../Component/Title";
+import ProjectDetails from "./ProjectDetails";
+// Demo text
+
+const demText =
+  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. In voluptatum at pariatur asperiores! Numquam iure animi voluptatibus voluptates nihil fuga consequatur unde cupiditate et quam, ipsum quisquam odio ipsam placeat.Lorem ipsum, dolor sit amet consectetur adipisicing elit. In voluptatum at pariatur asperiores! Numquam iure animi voluptatibus voluptates nihil fuga consequatur unde cupiditate et quam, ipsum quisquam odio ipsam placeat.Lorem ipsum, dolor sit amet consectetur adipisicing elit. In voluptatum at pariatur asperiores! Numquam iure animi voluptatibus voluptates nihil fuga consequatur unde cupiditate et quam, ipsum quisquam odio ipsam placeat.Lorem ipsum, dolor sit amet consectetur adipisicing elit. In voluptatum at pariatur asperiores! Numquam iure animi voluptatibus voluptates nihil fuga consequatur unde cupiditate et quam, ipsum quisquam odio ipsam placeat.Lorem ipsum, dolor sit amet consectetur adipisicing elit. In voluptatum at pariatur asperiores! Numquam iure animi voluptatibus voluptates nihil fuga consequatur unde cupiditate et quam, ipsum quisquam odio ipsam placeat.Lorem ipsum, dolor sit amet consectetur adipisicing elit. In voluptatum at pariatur asperiores! Numquam iure animi voluptatibus voluptates nihil fuga consequatur unde cupiditate et quam, ipsum quisquam odio ipsam placeat.Lorem ipsum, dolor sit amet consectetur adipisicing elit. In voluptatum at pariatur asperiores! Numquam iure animi voluptatibus voluptates nihil fuga consequatur unde cupiditate et quam, ipsum quisquam odio ipsam placeat.Lorem ipsum, dolor sit amet consectetur adipisicing elit. In voluptatum at pariatur asperiores! Numquam iure animi voluptatibus voluptates nihil fuga consequatur unde cupiditate et quam, ipsum quisquam odio ipsam placeat.";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -109,12 +114,11 @@ export default function PortFolio() {
               {allFront.map((af) => (
                 <Grid key={af} xs={12} sm={12} md={4} lg={4} xl={4}>
                   <Item>
-                    <PortFolioCard
-                      btn="Details"
-                      dec="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quam nulla quaerat ullam eum, culpa fuga veniam possimus perspiciatis nesciunt corporis? Laborum doloribus dignissimos beatae ipsam officiis aspernatur nobis cupiditate."
-                      img2={af}
-                      img1={af}
-                      alt="One image "
+                    <ProjectDetails
+                      img={af}
+                      alt="This is frontend project image"
+                      title="Frontend Development"
+                      proDes={demText}
                     />
                   </Item>
                 </Grid>
@@ -136,12 +140,11 @@ export default function PortFolio() {
                   lg={3}
                   xl={3}>
                   <Item>
-                    <PortFolioCard
-                      btn="Details"
-                      dec="Here is description"
-                      img2={back}
-                      img1={back}
-                      alt="One image "
+                  <ProjectDetails
+                      alt="This is Backend project image"
+                      img={back}
+                      title="Backend Development"
+                      proDes={demText}
                     />
                   </Item>
                 </Grid>
@@ -163,12 +166,11 @@ export default function PortFolio() {
                   lg={3}
                   xl={3}>
                   <Item>
-                    <PortFolioCard
-                      btn="Details"
-                      dec="Here is description"
-                      img2={full}
-                      img1={full}
-                      alt="One image "
+                  <ProjectDetails
+                      alt="This is FullStack project image"
+                      img={full}
+                      title="Backend Development"
+                      proDes={demText}
                     />
                   </Item>
                 </Grid>
@@ -190,12 +192,11 @@ export default function PortFolio() {
                   lg={3}
                   xl={3}>
                   <Item>
-                    <PortFolioCard
-                      btn="Details"
-                      dec="Here is description"
-                      img2={cm}
-                      img1={cm}
-                      alt="One image "
+                  <ProjectDetails
+                      alt="This is CMS project image"
+                      img={cm}
+                      title="CMS Development"
+                      proDes={demText}
                     />
                   </Item>
                 </Grid>

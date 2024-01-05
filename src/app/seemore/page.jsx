@@ -10,14 +10,11 @@ import ArchiveIcon from "@mui/icons-material/Archive";
 import Paper from "@mui/material/Paper";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import ListItemAvatar from "@mui/material/ListItemAvatar";
 import ListItemText from "@mui/material/ListItemText";
-import Avatar from "@mui/material/Avatar";
-import { Button, Container } from "@mui/material";
-import Image from "next/image";
-import Client from "../image/client/testi-1.jpg";
+import { Button, Container, Typography } from "@mui/material";
+
 import Link from "next/link";
-import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 
 function refreshMessages() {
   const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
@@ -39,32 +36,30 @@ export default function Review() {
 
   return (
     <Container maxWidth="sm">
-      <Box sx={{textAlign:'end' }}>
-      <Link href={"/"} >
-        <Button variant="contained" 
-        color="secondary" 
-        startIcon={<KeyboardBackspaceIcon />} sx={{ mt: 1 }}>
-          Home
-        </Button>
-      </Link>
+      <Box sx={{ textAlign: "end" }}>
+        <Link href={"/"}>
+          <Button
+            variant="contained"
+            color="secondary"
+            startIcon={<KeyboardBackspaceIcon />}
+            sx={{ mt: 1 }}>
+            Home
+          </Button>
+        </Link>
       </Box>
-      
 
       <Box sx={{ pb: 7 }} ref={ref}>
         <CssBaseline />
         <List>
           {messages.map(({ primary, secondary }, index) => (
             <ListItem button key={index}>
-              <ListItemAvatar>
-                <Avatar alt="Profile Picture" src={""} />
-              </ListItemAvatar>
               <ListItemText primary={primary} secondary={secondary} />
             </ListItem>
           ))}
         </List>
         <Paper
           sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
-          elevation={3}>
+          elevation={4}>
           <BottomNavigation
             showLabels
             value={value}
@@ -72,15 +67,15 @@ export default function Review() {
               setValue(newValue);
             }}>
             <BottomNavigationAction
-              label="Running"
+              label="Basic"
               icon={<RestoreIcon color="secondary" />}
             />
             <BottomNavigationAction
-              label="Best"
+              label="Premium"
               icon={<FavoriteIcon color="secondary" />}
             />
             <BottomNavigationAction
-              label="Delivery"
+              label="customized"
               icon={<ArchiveIcon color="secondary" />}
             />
           </BottomNavigation>
@@ -92,19 +87,19 @@ export default function Review() {
 
 const messageExamples = [
   {
-    primary: "WordPress",
+    primary: "FullStack Project $5000",
     secondary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nihil ex labore beatnima quo, vero eveniet sapiente nisi, reprehenderit voluptatibus mollitia!",
+      "Production grade projet • Web app • Cloud • R&D • Security • Hosting • DevOps. a)Delivery time Two Month b)Unlimited Revisions (c)10 pages (d)Design customization (e)Content upload (f)Responsive design (g)Source code (h)Detailed code comments",
   },
   {
-    primary: "Jumla",
+    primary: "Frontend Project $2000",
     secondary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nihil ex labore beatae soluta vero eveniet sapiente nisi, reprehenderit voluptatibus mollitia!",
+      "Production grade projet • Web app • Cloud • R&D • Security • Hosting • DevOps. a)Delivery time Two Month b)Unlimited Revisions (c)10 pages (d)Design customization (e)Content upload ",
   },
   {
-    primary: "Row HTML And CSS",
+    primary: "Backend Project $3000",
     secondary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nihil ex labore beatae soluta adipisci facilis dolorum necessitatibus sint delectus magni minima quoitia!",
+      "Production grade projet • Web app • Cloud • R&D • Security • Hosting • DevOps. a)Delivery time One Month b)Unlimited Revisions (c)10 pages (e)Content upload (g)Source code (h)Detailed code comments",
   },
   {
     primary: "Reactjs And Nextjs",
