@@ -23,13 +23,14 @@ const Services = () => {
     <Container maxWidth="lg">
       <Title
         title="Full Stack Web Services"
-        text="Frontend web Development with React and NextJS"
-        text2="Backend Web application Development with Nodejs and Strapi"
+        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eaque sequi vel laborum perspiciatis,"
+        text2="provident, consequuntur nulla ad laboriosam iste! Nisi incidunt, "
       />
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
             <Item>
+              
               <ServicesCard
                 title="Frontend"
                 description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolorum repudiandae exercitationem velit est? Dicta, odit quae sint laudantium, temporibus voluptas obcaecati aperiam veniam fugiat,"

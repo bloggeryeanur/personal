@@ -161,8 +161,8 @@ function DrawerAppBar(props) {
                   to={id}
                   spy={true}
                   smooth={true}
-                  offset={50}
-                  duration={500}
+                  offset={-100}
+                  duration={600}
                   key={id}>
                   <Button>{name}</Button>
                 </Link>
@@ -213,6 +213,7 @@ function DrawerAppBar(props) {
         <Contact />
       </Box>
       <Footer />
+     
     </ThemeProvider>
   );
 }

@@ -29,8 +29,8 @@ export default function Contact() {
     <Container maxWidth="lg">
       <Title
         title="Contact Me"
-        text="It is a long established fact that a reader will be of a page when "
-        text2="established fact looking at its layout."
+        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eaque sequi vel laborum perspiciatis,"
+        text2="provident, consequuntur nulla ad laboriosam iste! Nisi incidunt, "
       />
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
@@ -38,21 +38,21 @@ export default function Contact() {
             <Item>
               <AddIcCallIcon color="secondary" />
               <Typography variant="h5">Call Us On</Typography>
-              <Typography>+8801620-34 93 63</Typography>
+              <Typography>(+060) 444 333 444</Typography>
             </Item>
           </Grid>
           <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
             <Item>
               <AttachEmailIcon color="secondary" />
               <Typography variant="h5">Email : </Typography>
-              <Typography>bloggeryeanur@gmail.com</Typography>
+              <Typography>your@mail.com</Typography>
             </Item>
           </Grid>
           <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
             <Item>
               <AddLocationAltIcon color="secondary" />
               <Typography variant="h5">My Office</Typography>
-              <Typography>Dhanmondhi 6, House 22, Bangladesh</Typography>
+              <Typography>60 Shacham street, Los Angeles, USA.</Typography>
             </Item>
           </Grid>
         </Grid>

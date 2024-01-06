@@ -3,7 +3,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "../globals.css";
 import { Pagination, Autoplay } from "swiper/modules";
-// 
+//
 import {
   Box,
   Button,
@@ -20,52 +20,50 @@ import Three from "../image/background/3.jpg";
 import HeroCard from "./HeroCard";
 // Theme function
 
-
-
-
 const HeroSection = () => {
   const pagination = {
     clickable: true,
-    // renderBullet: function (index, className) {
-    //   return '<span class="' + className + '">' + (index + 1) + "</span>";
-    // },
   };
   return (
-      <Box sx={{ py: 1, mt: 6 }}>
-        <CssBaseline />
-        <Swiper
-          pagination={pagination}
-          modules={[Pagination, Autoplay]}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}>
-          <SwiperSlide>
-            <HeroCard
-              img={One}
-              title="Web Development"
-              desc="I'm Programming for Web Development"
-            />
-          </SwiperSlide>
+    <Box>
+      <CssBaseline />
+      <Swiper
+        pagination={pagination}
+        loop={true}
+        modules={[Pagination, Autoplay]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}>
+        <SwiperSlide>
+          <HeroCard
+            img={One}
+            title="Web"
+            desc1="FullStack | 4 Year Experience"
+            desc2="JavaScript"
+          />
+        </SwiperSlide>
 
-          {/* Slider Two */}
-          <SwiperSlide>
-            <HeroCard
-              img={Two}
-              title="IOS Development"
-              desc="I'm Programming for IOS Development"
-            />
-          </SwiperSlide>
+        {/* Slider Two */}
+        <SwiperSlide>
+          <HeroCard
+            img={Two}
+            title="App"
+            desc1="IOS & Android | 3 Year Experience"
+            desc2="Native and Cross"
+          />
+        </SwiperSlide>
 
-          <SwiperSlide>
-            <HeroCard
-              img={Three}
-              title="Linux Development"
-              desc="I'm Programming for Android Development"
-            />
-          </SwiperSlide>
-        </Swiper>
-      </Box>
+        <SwiperSlide>
+          <HeroCard
+            img={Three}
+            title="UI UX"
+            desc1="All Platform | 4 Years Experience"
+            desc2="Figma | Adobe"
+          />
+        </SwiperSlide>
+      </Swiper>
+    </Box>
   );
 };
 

@@ -32,7 +32,6 @@ import {
   WifiProtectedSetupRounded,
   cmsHistory,
 } from "@mui/icons-material";
-import PortFolioCard from "./PortFolioCard";
 import Title from "../Component/Title";
 import ProjectDetails from "./ProjectDetails";
 // Demo text
@@ -79,7 +78,7 @@ export default function PortFolio() {
     setValue(newValue);
   };
 
-  const allFront = [One, Two, Three, Four, Five];
+  const fronts = [One, Two, Three];
   const backs = [Two, Three, Four, Five];
   const fullstacks = [Three, Four, Five];
   const cms = [One, Two, Three, Five];
@@ -110,12 +109,12 @@ export default function PortFolio() {
         {/* All Front end section Start */}
         <CustomTabPanel value={value} index={0}>
           <Box sx={{ flexGrow: 1 }}>
-            <Grid container spacing={1}>
-              {allFront.map((af) => (
-                <Grid key={af} xs={12} sm={12} md={4} lg={4} xl={4}>
+            <Grid container spacing={1} >
+              {fronts.map((front) => (
+                <Grid key={front} xs={12} sm={12} md={4} lg={4} xl={4} sx={{p:1}}>
                   <Item>
                     <ProjectDetails
-                      img={af}
+                      img={front}
                       alt="This is frontend project image"
                       title="Frontend Development"
                       proDes={demText}
@@ -131,16 +130,9 @@ export default function PortFolio() {
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={1}>
               {backs.map((back) => (
-                <Grid
-                  key={back}
-                  sx={{ display: "flex", justifyContent: "center" }}
-                  xs={12}
-                  sm={12}
-                  md={4}
-                  lg={3}
-                  xl={3}>
+                 <Grid key={back} xs={12} sm={12} md={4} lg={4} xl={4} sx={{p:1}}>
                   <Item>
-                  <ProjectDetails
+                    <ProjectDetails
                       alt="This is Backend project image"
                       img={back}
                       title="Backend Development"
@@ -157,16 +149,9 @@ export default function PortFolio() {
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={1}>
               {fullstacks.map((full) => (
-                <Grid
-                  key={full}
-                  sx={{ display: "flex", justifyContent: "center" }}
-                  xs={12}
-                  sm={12}
-                  md={4}
-                  lg={3}
-                  xl={3}>
+                 <Grid key={full} xs={12} sm={12} md={4} lg={4} xl={4} sx={{p:1}}>
                   <Item>
-                  <ProjectDetails
+                    <ProjectDetails
                       alt="This is FullStack project image"
                       img={full}
                       title="Backend Development"
@@ -183,16 +168,9 @@ export default function PortFolio() {
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={1}>
               {cms.map((cm) => (
-                <Grid
-                  key={cm}
-                  sx={{ display: "flex", justifyContent: "center" }}
-                  xs={12}
-                  sm={12}
-                  md={4}
-                  lg={3}
-                  xl={3}>
+                 <Grid key={cm} xs={12} sm={12} md={4} lg={4} xl={4} sx={{p:1}}>
                   <Item>
-                  <ProjectDetails
+                    <ProjectDetails
                       alt="This is CMS project image"
                       img={cm}
                       title="CMS Development"

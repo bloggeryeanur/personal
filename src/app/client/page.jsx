@@ -27,8 +27,8 @@ const Client = () => {
     <Container maxWidth="lg">
       <Title
         title="Regular Client"
-        text="Our Lot of client Work with me there is national and internationaly"
-        text2="I Services Web Development FullStack"
+        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eaque sequi vel laborum perspiciatis,"
+        text2="provident, consequuntur nulla ad laboriosam iste! Nisi incidunt, "
       />
 
       <>
@@ -36,6 +36,7 @@ const Client = () => {
           style={{ padding: "1rem 0" }}
           slidesPerView={3}
           spaceBetween={20}
+          loop={true}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,

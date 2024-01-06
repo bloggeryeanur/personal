@@ -33,7 +33,7 @@ export default function ProjectDetails({proDes,title,img,alt}) {
   }, [open]);
 
   return (
-    <React.Fragment>
+    <>
       <Button onClick={handleClickOpen("paper")}>
         <Image src={img} alt={alt} />
       </Button>
@@ -61,6 +61,6 @@ export default function ProjectDetails({proDes,title,img,alt}) {
           </Link>
         </DialogActions>
       </Dialog>
-    </React.Fragment>
+    </>
   );
 }

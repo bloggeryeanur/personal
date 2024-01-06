@@ -61,7 +61,7 @@ const About = () => {
                   paddingTop: "1rem",
                 }}>
                 <Image
-                  style={{ borderRadius: "50%", width: "25rem" }}
+                  style={{ }}
                   src={Yeanur}
                   alt="Yeanur image"
                 />

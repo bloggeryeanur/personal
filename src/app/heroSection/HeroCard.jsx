@@ -1,13 +1,13 @@
 import { Box, Button, Typography } from "@mui/material";
 import Image from "next/image";
 
-const HeroCard = ({ img, title, desc }) => {
+const HeroCard = ({ img, title, desc1, desc2 }) => {
   return (
     <Box style={{ position: "relative", textAlign: "center" }}>
       <Image
         src={img}
         alt="Your Image Alt Text"
-        style={{ width: "100%", maxHeight: "100vh" }}
+        style={{ width: "100%", height: "auto", opacity: 0.7 }}
       />
       <Box
         style={{
@@ -16,13 +16,15 @@ const HeroCard = ({ img, title, desc }) => {
           left: "50%",
           transform: "translate(-50%, -50%)",
           paddingTop: "1rem",
-          color: "black",
         }}>
-        <Typography variant="h4">{title}</Typography>
-        <Typography sx={{ pb: 1 }}>{desc}</Typography>
-        <Button variant="contained" color="secondary">
-          Download CV
-        </Button>
+        <Box sx={{ mt: 4 }}>
+          <Typography variant="h4">{title}</Typography>
+          <Typography>{desc1}</Typography>
+          <Typography>{desc2}</Typography>
+          <Button variant="contained" color="secondary" sx={{ mt: 2 }}>
+            Download CV
+          </Button>
+        </Box>
       </Box>
     </Box>
   );
