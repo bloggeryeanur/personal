@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -21,7 +21,9 @@ export default function HireMe() {
         marginTop: "4rem",
       }}>
       <Box sx={{ textAlign: "center" }}>
-        <Typography variant="h5">I <Abbr></Abbr>m Available For Remote Work !</Typography>
+        <Typography variant="h5">
+          I <Abbr></Abbr>m Available For Remote Work !
+        </Typography>
         <Link href={"/form"}>
           <Button
             endIcon={<EastIcon />}

@@ -10,7 +10,7 @@ import { Poppins, Roboto } from "next/font/google";
 import Link from "next/link";
 import EastIcon from "@mui/icons-material/East";
 
-// Grid Material UI  
+// Grid Material UI
 const Item = styled(Box)(({ theme }) => ({
   padding: theme.spacing(1),
 }));
@@ -41,7 +41,7 @@ const About = () => {
                   Pariatur asperiores, aut velit voluptatibus error obcaecati
                   debitis.
                 </Typography>
-                <Typography>Now i'm working won my project</Typography>
+                <Typography>Now i working won my project</Typography>
                 <Link href={"/form"}>
                   <Button
                     variant="contained"
@@ -54,9 +54,9 @@ const About = () => {
               </Box>
             </Item>
           </Grid>
-           {/* About section (name, description and button)  End*/}
+          {/* About section (name, description and button)  End*/}
 
-           {/* About Profile pic Section Start */}
+          {/* About Profile pic Section Start */}
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <Item>
               <Box
@@ -65,11 +65,7 @@ const About = () => {
                   justifyContent: "center",
                   paddingTop: "1rem",
                 }}>
-                <Image
-                  style={{ }}
-                  src={Yeanur}
-                  alt="Yeanur image"
-                />
+                <Image style={{}} src={Yeanur} alt="Yeanur image" />
               </Box>
             </Item>
           </Grid>
