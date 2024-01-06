@@ -9,7 +9,7 @@ import Image from "next/image";
 import Project from "../image/wrok/1.jpg";
 import Link from "next/link";
 
-export default function ProjectDetails({proDes,title,img,alt}) {
+export default function ProjectDetails({ proDes, title, img, alt }) {
   const [open, setOpen] = React.useState(false);
   const [scroll, setScroll] = React.useState("paper");
 
@@ -37,7 +37,7 @@ export default function ProjectDetails({proDes,title,img,alt}) {
       <Button onClick={handleClickOpen("paper")}>
         <Image src={img} alt={alt} />
       </Button>
-     
+
       <Dialog
         open={open}
         onClose={handleClose}
@@ -50,14 +50,13 @@ export default function ProjectDetails({proDes,title,img,alt}) {
             id="scroll-dialog-description"
             ref={descriptionElementRef}
             tabIndex={-1}>
-                {proDes}
+            {proDes}
           </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Close</Button>
           <Link href={"/form"}>
-
-          <Button onClick={handleClose}>Order</Button>
+            <Button onClick={handleClose}>Order</Button>
           </Link>
         </DialogActions>
       </Dialog>

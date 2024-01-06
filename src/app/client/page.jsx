@@ -1,30 +1,22 @@
 import { Box, Container, Typography } from "@mui/material";
 import Title from "../Component/Title";
 import Image from "next/image";
-import Rahman from "../image/client/testi-1.jpg";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
-
-//
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-
-// import required modules
-import { Autoplay } from "swiper/modules";
-import ClientCard from "./ClientCard";
 import One from "../image/client/testi-1.jpg";
-import Two from "../image/client/testi-2.jpg";
-import Three from "../image/client/testi-3.jpg";
+import ClientCard from "./ClientCard";
 
-const Client = () => {
+// SwiperJs import (Swiper JS is a free, open-source JavaScript library that creates touch sliders for mobile websites, web apps, and native/hybrid apps. )
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/pagination";
+import { Autoplay } from "swiper/modules";
+
+export default function Client() {
   return (
     <Container maxWidth="lg">
+      {/* Import title component form Title file */}
       <Title
         title="Regular Client"
         text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eaque sequi vel laborum perspiciatis,"
@@ -43,7 +35,9 @@ const Client = () => {
           }}
           modules={[Autoplay]}
           className="mySwiper">
+          {/*-------------First client section start-------------*/}
           <SwiperSlide>
+            {/* Import Services minified component from ServicesCard file */}
             <ClientCard
               img={One}
               title="Mr. Yeanur"
@@ -51,23 +45,21 @@ const Client = () => {
               alt="First client image"
             />
           </SwiperSlide>
+          {/*-------------First client section End-------------*/}
+          {/*-------------Second client section start-------------*/}
           <SwiperSlide>
+            {/* Import Services minified component from ServicesCard file */}
             <ClientCard
-              img={Two}
+              img={One}
               title="Md. Yeanur"
               des="Backend"
               alt="First client image"
             />
           </SwiperSlide>{" "}
+          {/*-------------Second client section End-------------*/}
+          {/*-------------Third client section start-------------*/}
           <SwiperSlide>
-            <ClientCard
-              img={Three}
-              title="Mr. Yeanur"
-              des="FullStack"
-              alt="First client image"
-            />
-          </SwiperSlide>{" "}
-          <SwiperSlide>
+            {/* Import Services minified component from ServicesCard file */}
             <ClientCard
               img={One}
               title="Mr. Yeanur"
@@ -75,34 +67,20 @@ const Client = () => {
               alt="First client image"
             />
           </SwiperSlide>{" "}
+          {/*-------------Third client section End-------------*/}
+          {/*-------------Fourth client section start-------------*/}
           <SwiperSlide>
-            <ClientCard
-              img={Two}
-              title="Md. Yeanur"
-              des="CMS"
-              alt="First client image"
-            />
-          </SwiperSlide>{" "}
-          <SwiperSlide>
+            {/* Import Services minified component from ServicesCard file */}
             <ClientCard
               img={One}
               title="Mr. Yeanur"
-              des="Frontend"
+              des="FullStack"
               alt="First client image"
             />
           </SwiperSlide>{" "}
-          <SwiperSlide>
-            <ClientCard
-              img={One}
-              title="Mr. Yeanur"
-              des="Backend"
-              alt="First client image"
-            />
-          </SwiperSlide>
+          {/*-------------Fourth client section End-------------*/}
         </Swiper>
       </>
     </Container>
   );
-};
-
-export default Client;
+}

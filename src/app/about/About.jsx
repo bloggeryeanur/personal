@@ -9,7 +9,8 @@ import { green, orange } from "@mui/material/colors";
 import { Poppins, Roboto } from "next/font/google";
 import Link from "next/link";
 import EastIcon from "@mui/icons-material/East";
-// Grid stytem
+
+// Grid Material UI  
 const Item = styled(Box)(({ theme }) => ({
   padding: theme.spacing(1),
 }));
@@ -19,6 +20,7 @@ const About = () => {
     <Container maxWidth="lg">
       <Box sx={{ flexGrow: 1, marginTop: "5rem" }}>
         <Grid container spacing={2}>
+          {/* About section (name, description and button)  start*/}
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <Item>
               <Box sx={{ paddingTop: "2rem", paddingLeft: "1rem" }}>
@@ -52,6 +54,9 @@ const About = () => {
               </Box>
             </Item>
           </Grid>
+           {/* About section (name, description and button)  End*/}
+
+           {/* About Profile pic Section Start */}
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
             <Item>
               <Box
@@ -68,6 +73,7 @@ const About = () => {
               </Box>
             </Item>
           </Grid>
+          {/* About Profile pic Section End */}
         </Grid>
       </Box>
     </Container>

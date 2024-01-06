@@ -1,7 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import Image from "next/image";
 
-const HeroCard = ({ img, title, desc1, desc2 }) => {
+export default function HeroCard({ img, title, desc1, desc2 }) {
   return (
     <Box style={{ position: "relative", textAlign: "center" }}>
       <Image
@@ -28,6 +28,4 @@ const HeroCard = ({ img, title, desc1, desc2 }) => {
       </Box>
     </Box>
   );
-};
-
-export default HeroCard;
+}

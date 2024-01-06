@@ -3,7 +3,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "../globals.css";
 import { Pagination, Autoplay } from "swiper/modules";
-//
 import {
   Box,
   Button,
@@ -14,18 +13,20 @@ import {
   Typography,
   createTheme,
 } from "@mui/material";
+
+// Slider / carousel image import 
 import One from "../image/background/1.jpg";
 import Two from "../image/background/2.jpg";
 import Three from "../image/background/3.jpg";
 import HeroCard from "./HeroCard";
-// Theme function
 
-const HeroSection = () => {
+export default function HeroSection() {
   const pagination = {
     clickable: true,
   };
   return (
     <Box>
+      {/* This is the default Style disabled by buil in Materia ui  component */}
       <CssBaseline />
       <Swiper
         pagination={pagination}
@@ -36,6 +37,7 @@ const HeroSection = () => {
           disableOnInteraction: false,
         }}>
         <SwiperSlide>
+          {/* Import Slider or carousel minified component */}
           <HeroCard
             img={One}
             title="Web"
@@ -65,6 +67,4 @@ const HeroSection = () => {
       </Swiper>
     </Box>
   );
-};
-
-export default HeroSection;
+}

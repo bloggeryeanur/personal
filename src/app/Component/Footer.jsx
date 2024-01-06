@@ -20,7 +20,7 @@ const thisYear = new Date().getFullYear();
 const Footer = () => {
   return (
     <Box>
-      <Grid container display="flex" justifyContent="center" alignItem="center">
+      <Grid container display="flex" justifyContent="center">
         <Grid item xs={12}>
           <Item sx={{ py: 7 }}>
             <Typography>

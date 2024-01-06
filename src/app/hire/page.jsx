@@ -1,4 +1,3 @@
-import * as React from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -6,9 +5,10 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Box, Button, Container, Typography } from "@mui/material";
 import Link from "next/link";
 import EastIcon from "@mui/icons-material/East";
+import { useState } from "react";
 
-const HireMe = () => {
-  const [expanded, setExpanded] = React.useState(false);
+export default function HireMe() {
+  const [expanded, setExpanded] = useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -33,6 +33,7 @@ const HireMe = () => {
         </Link>
       </Box>
       <Box>
+        {/*-------------First Question Start-------------*/}
         <Accordion
           expanded={expanded === "panel1"}
           onChange={handleChange("panel1")}>
@@ -55,6 +56,9 @@ const HireMe = () => {
               totam eius excepturi minima autem cum!
             </Typography>
           </AccordionDetails>
+          {/*-------------First Question End-------------*/}
+
+          {/*-------------Second Question Start-------------*/}
         </Accordion>
         <Accordion
           expanded={expanded === "panel2"}
@@ -79,6 +83,9 @@ const HireMe = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
+        {/*-------------Second Question End-------------*/}
+
+        {/*-------------Third Question Start-------------*/}
         <Accordion
           expanded={expanded === "panel3"}
           onChange={handleChange("panel3")}>
@@ -102,6 +109,9 @@ const HireMe = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
+        {/*-------------Third Question End-------------*/}
+
+        {/*-------------fourth Question Start-------------*/}
         <Accordion
           expanded={expanded === "panel4"}
           onChange={handleChange("panel4")}>
@@ -118,14 +128,15 @@ const HireMe = () => {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer
-              sit amet egestas eros, vitae egestas augue. Duis vel est augue.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
+              eligendi repudiandae enim consectetur dignissimos nam reiciendis
+              deleniti, expedita vitae architecto sint, natus pariatur dolorum
+              totam eius excepturi minima autem cum!
             </Typography>
           </AccordionDetails>
         </Accordion>
+        {/*-------------fourth Question Start-------------*/}
       </Box>
     </Container>
   );
-};
-
-export default HireMe;
+}

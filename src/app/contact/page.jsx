@@ -14,8 +14,7 @@ import AttachEmailIcon from "@mui/icons-material/AttachEmail";
 import AddLocationAltIcon from "@mui/icons-material/AddLocationAlt";
 import ContactForm from "./ContactForm";
 
-
-// Gird function
+// Grid Material UI
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
@@ -27,6 +26,7 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function Contact() {
   return (
     <Container maxWidth="lg">
+      {/* Import title component form Title file */}
       <Title
         title="Contact Me"
         text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eaque sequi vel laborum perspiciatis,"
@@ -34,6 +34,7 @@ export default function Contact() {
       />
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
+          {/*-------------Contact Number Section Start-------------*/}
           <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
             <Item>
               <AddIcCallIcon color="secondary" />
@@ -41,6 +42,9 @@ export default function Contact() {
               <Typography>(+060) 444 333 444</Typography>
             </Item>
           </Grid>
+          {/*-------------Contact Number Section End-------------*/}
+
+          {/*-------------Contact Mail Section Start-------------*/}
           <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
             <Item>
               <AttachEmailIcon color="secondary" />
@@ -48,6 +52,9 @@ export default function Contact() {
               <Typography>your@mail.com</Typography>
             </Item>
           </Grid>
+          {/*-------------Contact Mail Section End-------------*/}
+
+          {/*-------------Contact Address Section Start-------------*/}
           <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
             <Item>
               <AddLocationAltIcon color="secondary" />
@@ -55,9 +62,12 @@ export default function Contact() {
               <Typography>60 Shacham street, Los Angeles, USA.</Typography>
             </Item>
           </Grid>
+          {/*-------------Contact Address Section End-------------*/}
         </Grid>
       </Box>
-   <ContactForm />
+
+      {/* Import Form minified component from ContactForm file */}
+      <ContactForm />
     </Container>
   );
 }

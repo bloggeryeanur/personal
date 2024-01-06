@@ -1,4 +1,3 @@
-import * as React from "react";
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -7,24 +6,6 @@ import Box from "@mui/material/Box";
 import { Container, Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
-
-// Grid Function
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
-
-// cmsing image
-
-import One from "../image/wrok/1.jpg";
-import Two from "../image/wrok/2.jpg";
-import Three from "../image/wrok/3.jpg";
-import Four from "../image/wrok/4.jpg";
-import Five from "../image/wrok/5.jpg";
-// Wroking icon
 import {
   backServices,
   backServicesOutlined,
@@ -34,8 +15,25 @@ import {
 } from "@mui/icons-material";
 import Title from "../Component/Title";
 import ProjectDetails from "./ProjectDetails";
-// Demo text
 
+// Import Portfolio images
+import One from "../image/wrok/1.jpg";
+import Two from "../image/wrok/2.jpg";
+import Three from "../image/wrok/3.jpg";
+import Four from "../image/wrok/4.jpg";
+import Five from "../image/wrok/5.jpg";
+import { useState } from "react";
+
+// Grid Material UI
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: "center",
+  color: theme.palette.text.secondary,
+}));
+
+// Project demo text
 const demText =
   "Lorem ipsum, dolor sit amet consectetur adipisicing elit. In voluptatum at pariatur asperiores! Numquam iure animi voluptatibus voluptates nihil fuga consequatur unde cupiditate et quam, ipsum quisquam odio ipsam placeat.Lorem ipsum, dolor sit amet consectetur adipisicing elit. In voluptatum at pariatur asperiores! Numquam iure animi voluptatibus voluptates nihil fuga consequatur unde cupiditate et quam, ipsum quisquam odio ipsam placeat.Lorem ipsum, dolor sit amet consectetur adipisicing elit. In voluptatum at pariatur asperiores! Numquam iure animi voluptatibus voluptates nihil fuga consequatur unde cupiditate et quam, ipsum quisquam odio ipsam placeat.Lorem ipsum, dolor sit amet consectetur adipisicing elit. In voluptatum at pariatur asperiores! Numquam iure animi voluptatibus voluptates nihil fuga consequatur unde cupiditate et quam, ipsum quisquam odio ipsam placeat.Lorem ipsum, dolor sit amet consectetur adipisicing elit. In voluptatum at pariatur asperiores! Numquam iure animi voluptatibus voluptates nihil fuga consequatur unde cupiditate et quam, ipsum quisquam odio ipsam placeat.Lorem ipsum, dolor sit amet consectetur adipisicing elit. In voluptatum at pariatur asperiores! Numquam iure animi voluptatibus voluptates nihil fuga consequatur unde cupiditate et quam, ipsum quisquam odio ipsam placeat.Lorem ipsum, dolor sit amet consectetur adipisicing elit. In voluptatum at pariatur asperiores! Numquam iure animi voluptatibus voluptates nihil fuga consequatur unde cupiditate et quam, ipsum quisquam odio ipsam placeat.Lorem ipsum, dolor sit amet consectetur adipisicing elit. In voluptatum at pariatur asperiores! Numquam iure animi voluptatibus voluptates nihil fuga consequatur unde cupiditate et quam, ipsum quisquam odio ipsam placeat.";
 
@@ -72,7 +70,7 @@ function a11yProps(index) {
 }
 
 export default function PortFolio() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -85,6 +83,7 @@ export default function PortFolio() {
 
   return (
     <Container maxWidth="lg">
+      {/* Import title component form Title file */}
       <Title
         title="Project"
         text="Lorem ipsum dolor sit amet consectetur adipisicing elit"
@@ -106,13 +105,22 @@ export default function PortFolio() {
             <Tab label="CMS" {...a11yProps(3)} />
           </Tabs>
         </Box>
-        {/* All Front end section Start */}
+        {/*-------------Frontend section Start-------------*/}
         <CustomTabPanel value={value} index={0}>
           <Box sx={{ flexGrow: 1 }}>
-            <Grid container spacing={1} >
+            <Grid container spacing={1}>
               {fronts.map((front) => (
-                <Grid key={front} xs={12} sm={12} md={4} lg={4} xl={4} sx={{p:1}}>
+                <Grid
+                  item
+                  key={front}
+                  xs={12}
+                  sm={12}
+                  md={4}
+                  lg={4}
+                  xl={4}
+                  sx={{ p: 1 }}>
                   <Item>
+                    {/* Import portfolio minified component from PfojectDetails file */}
                     <ProjectDetails
                       img={front}
                       alt="This is frontend project image"
@@ -125,13 +133,23 @@ export default function PortFolio() {
             </Grid>
           </Box>
         </CustomTabPanel>
-        {/* backs Section */}
+        {/*-------------Frontend section End-------------*/}
+        {/*-------------backend Section Start-------------*/}
         <CustomTabPanel value={value} index={1}>
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={1}>
               {backs.map((back) => (
-                 <Grid key={back} xs={12} sm={12} md={4} lg={4} xl={4} sx={{p:1}}>
+                <Grid
+                  item
+                  key={back}
+                  xs={12}
+                  sm={12}
+                  md={4}
+                  lg={4}
+                  xl={4}
+                  sx={{ p: 1 }}>
                   <Item>
+                    {/* Import portfolio minified component from PfojectDetails file */}
                     <ProjectDetails
                       alt="This is Backend project image"
                       img={back}
@@ -144,13 +162,25 @@ export default function PortFolio() {
             </Grid>
           </Box>
         </CustomTabPanel>
-        {/* Web back */}
+        {/*  */}
+        {/*-------------backend section end-------------*/}
+        {/*-------------FullStakc section Start-------------*/}
         <CustomTabPanel value={value} index={2}>
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={1}>
               {fullstacks.map((full) => (
-                 <Grid key={full} xs={12} sm={12} md={4} lg={4} xl={4} sx={{p:1}}>
+                <Grid
+                  item
+                  key={full}
+                  xs={12}
+                  sm={12}
+                  md={4}
+                  lg={4}
+                  xl={4}
+                  sx={{ p: 1 }}>
                   <Item>
+                    {/* Import portfolio minified component from PfojectDetails file */}
+
                     <ProjectDetails
                       alt="This is FullStack project image"
                       img={full}
@@ -163,13 +193,23 @@ export default function PortFolio() {
             </Grid>
           </Box>
         </CustomTabPanel>{" "}
-        {/* cms section */}
+        {/*-------------FullStakc section End-------------*/}
+        {/* -------Cms section Start-------------*/}
         <CustomTabPanel value={value} index={3}>
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={1}>
               {cms.map((cm) => (
-                 <Grid key={cm} xs={12} sm={12} md={4} lg={4} xl={4} sx={{p:1}}>
+                <Grid
+                  item
+                  key={cm}
+                  xs={12}
+                  sm={12}
+                  md={4}
+                  lg={4}
+                  xl={4}
+                  sx={{ p: 1 }}>
                   <Item>
+                    {/* Import portfolio minified component from PfojectDetails file */}
                     <ProjectDetails
                       alt="This is CMS project image"
                       img={cm}
@@ -182,6 +222,7 @@ export default function PortFolio() {
             </Grid>
           </Box>
         </CustomTabPanel>{" "}
+        {/*-------------Cms section End-------------*/}
       </Box>
     </Container>
   );

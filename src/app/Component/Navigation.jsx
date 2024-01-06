@@ -1,9 +1,7 @@
 "use client";
-import * as React from "react";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
@@ -26,6 +24,8 @@ import {
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import Profile from "../image/client/testi-1.jpg";
+import { Link } from "react-scroll";
+import { useState } from "react";
 import Image from "next/image";
 import HeroSection from "../heroSection/page";
 import About from "../about/About";
@@ -36,9 +36,8 @@ import Client from "../client/page";
 import Contact from "../contact/page";
 import Footer from "./Footer";
 import Skill from "../skill/page";
-import { Link } from "react-scroll";
-// Theming function
 
+// Navigation / Nav Menu item Start //
 const drawerWidth = 240;
 const navItems = [
   {
@@ -64,9 +63,12 @@ const navItems = [
   },
 ];
 
+// Navigation / Nav Menu item End //
+
+// Drawer Nav menu / navbar main function //
 function DrawerAppBar(props) {
   const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -108,7 +110,7 @@ function DrawerAppBar(props) {
   const container =
     window !== undefined ? () => window().document.body : undefined;
   // them function
-  const [dMode, setDMode] = React.useState(false);
+  const [dMode, setDMode] = useState(false);
 
   const dark = createTheme({
     palette: {
@@ -121,13 +123,10 @@ function DrawerAppBar(props) {
       mode: "light",
     },
   });
-  // Contact function
 
   return (
     <ThemeProvider theme={dMode === false ? light : dark}>
       <Box sx={{ display: "flex" }}>
-        <CssBaseline />
-
         <AppBar
           sx={{
             mx: "0 auto",
@@ -168,7 +167,7 @@ function DrawerAppBar(props) {
                 </Link>
               ))}
             </Box>
-            {/* Toggle button here */}
+            {/* Dark and light button */}
             <Switch onClick={() => setDMode(!dMode)} />
           </Toolbar>
         </AppBar>
@@ -191,7 +190,7 @@ function DrawerAppBar(props) {
             {drawer}
           </Drawer>
         </nav>
-        <Box sx={{}}></Box>
+        {/* Site All Component import start */}
       </Box>
       <Box id="home">
         <HeroSection />
@@ -199,6 +198,7 @@ function DrawerAppBar(props) {
       <Box id="about">
         <About />
       </Box>
+
       <Box id="portfolio">
         <PortFolio />
       </Box>
@@ -213,7 +213,8 @@ function DrawerAppBar(props) {
         <Contact />
       </Box>
       <Footer />
-     
+
+      {/* Site All Component import End */}
     </ThemeProvider>
   );
 }
