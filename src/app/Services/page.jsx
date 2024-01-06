@@ -1,3 +1,4 @@
+"use client";
 import { Box, Container, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
@@ -6,11 +7,11 @@ import Image from "next/image";
 import Title from "../Component/Title";
 import ServicesCard from "./ServicesCard";
 import One from "../image/services/1.png";
-import Two from '../image/services/2.png'
-import Three from '../image/services/3.png'
-import Four from '../image/services/4.png'
-import Five from '../image/services/5.png'
-import Six from '../image/services/6.png'
+import Two from "../image/services/2.png";
+import Three from "../image/services/3.png";
+import Four from "../image/services/4.png";
+import Five from "../image/services/5.png";
+import Six from "../image/services/6.png";
 
 // Grid Material UI
 const Item = styled(Paper)(({ theme }) => ({
