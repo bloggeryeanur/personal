@@ -41,7 +41,7 @@ const About = () => {
                   Pariatur asperiores, aut velit voluptatibus error obcaecati
                   debitis.
                 </Typography>
-                <Typography>Now i working won my project</Typography>
+                <Typography>Now I working won my project</Typography>
                 <Link href={"/form"}>
                   <Button
                     variant="contained"
