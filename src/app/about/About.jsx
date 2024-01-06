@@ -25,7 +25,7 @@ const About = () => {
             <Item>
               <Box sx={{ paddingTop: "2rem", paddingLeft: "1rem" }}>
                 <Typography sx={{ fontWeight: 700 }} variant="h4">
-                  Hey I'm Yeanur Rahman{" "}
+                  Hey I Am Yeanur Rahman{" "}
                 </Typography>
                 <Typography>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
