@@ -7,10 +7,10 @@ export default function HeroCard({ img, title, desc1, desc2 }) {
       <Image
         src={img}
         alt="Your Image Alt Text"
-        style={{ width: "100%", height: "auto", opacity: 0.7 }}
+        style={{ width: "100%", height: "100vh", opacity: 0.7 }}
       />
       <Box
-        style={{
+        sx={{
           position: "absolute",
           top: "50%",
           left: "50%",

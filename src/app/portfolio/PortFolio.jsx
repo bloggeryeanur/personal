@@ -17,11 +17,11 @@ import Title from "../Component/Title";
 import ProjectDetails from "./ProjectDetails";
 
 // Import Portfolio images
-import One from "../image/wrok/1.jpg";
-import Two from "../image/wrok/2.jpg";
-import Three from "../image/wrok/3.jpg";
-import Four from "../image/wrok/4.jpg";
-import Five from "../image/wrok/5.jpg";
+import One from "../image/wrok/1.png";
+import Two from "../image/wrok/2.png";
+import Three from "../image/wrok/3.png";
+import Four from "../image/wrok/4.png";
+import Five from "../image/wrok/5.png";
 import { useState } from "react";
 
 // Grid Material UI

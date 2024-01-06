@@ -14,7 +14,7 @@ import {
   createTheme,
 } from "@mui/material";
 
-// Slider / carousel image import 
+// Slider / carousel image import
 import One from "../image/background/1.jpg";
 import Two from "../image/background/2.jpg";
 import Three from "../image/background/3.jpg";

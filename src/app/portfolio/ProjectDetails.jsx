@@ -6,7 +6,6 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Image from "next/image";
-import Project from "../image/wrok/1.jpg";
 import Link from "next/link";
 
 export default function ProjectDetails({ proDes, title, img, alt }) {

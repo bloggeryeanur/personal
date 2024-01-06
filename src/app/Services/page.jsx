@@ -4,9 +4,13 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import Image from "next/image";
 import Title from "../Component/Title";
-import Animal from "../image/services/animal.jpg";
-import One from "../image/services/1.jpeg";
 import ServicesCard from "./ServicesCard";
+import One from "../image/services/1.png";
+import Two from '../image/services/2.png'
+import Three from '../image/services/3.png'
+import Four from '../image/services/4.png'
+import Five from '../image/services/5.png'
+import Six from '../image/services/6.png'
 
 // Grid Material UI
 const Item = styled(Paper)(({ theme }) => ({
@@ -48,7 +52,7 @@ export default function Services() {
               <ServicesCard
                 title="Backend"
                 description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolorum repudiandae exercitationem velit est? Dicta, odit quae sint laudantium, temporibus voluptas obcaecati aperiam veniam fugiat,"
-                img={Animal}
+                img={Two}
               />
             </Item>
           </Grid>
@@ -61,7 +65,7 @@ export default function Services() {
               <ServicesCard
                 title="FullStack"
                 description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolorum repudiandae exercitationem velit est? Dicta, odit quae sint laudantium, temporibus voluptas obcaecati aperiam veniam fugiat,"
-                img={One}
+                img={Three}
               />
             </Item>
           </Grid>
@@ -74,7 +78,7 @@ export default function Services() {
               <ServicesCard
                 title="UI/UX"
                 description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolorum repudiandae exercitationem velit est? Dicta, odit quae sint laudantium, temporibus voluptas obcaecati aperiam veniam fugiat,"
-                img={Animal}
+                img={Four}
               />
             </Item>
           </Grid>
@@ -87,7 +91,7 @@ export default function Services() {
               <ServicesCard
                 title="E-comers"
                 description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolorum repudiandae exercitationem velit est? Dicta, odit quae sint laudantium, temporibus voluptas obcaecati aperiam veniam fugiat,"
-                img={One}
+                img={Five}
               />
             </Item>
           </Grid>
@@ -100,7 +104,7 @@ export default function Services() {
               <ServicesCard
                 title="News"
                 description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolorum repudiandae exercitationem velit est? Dicta, odit quae sint laudantium, temporibus voluptas obcaecati aperiam veniam fugiat,"
-                img={Animal}
+                img={Six}
               />
             </Item>
           </Grid>
