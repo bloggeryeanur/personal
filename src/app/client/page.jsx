@@ -18,7 +18,7 @@ export default function Client() {
     <Container maxWidth="lg">
       {/* Import title component form Title file */}
       <Title
-        title="Regular Client"
+        title="Our Regular Client"
         text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eaque sequi vel laborum perspiciatis,"
         text2="provident, consequuntur nulla ad laboriosam iste! Nisi incidunt, "
       />
